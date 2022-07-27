@@ -1,7 +1,9 @@
+//routes
+import RoutesTemplate from "./Routes";
 function App() {
   return (
     <div className="App">
-      <h1>Hello from react babes..</h1>
+      <RoutesTemplate />
     </div>
   );
 }
