@@ -10,6 +10,11 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 //routes
+app.use((req, res, next) => {
+  console.log(`Method ${req.method}`.america);
+  console.log(`Path ${req.path}`.gray);
+  next();
+});
 app.use("/api/auth", require("./routes/userRoutes"));
 //error handling middleware
 app.use(errorMiddleware);
